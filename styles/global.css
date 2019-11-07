@@ -1,0 +1,42 @@
+
+/* * { background-color: rgba(255,0,0,.2); }
+* * { background-color: rgba(0,255,0,.2); }
+* * * { background-color: rgba(0,0,255,.2); }
+* * * * { background-color: rgba(255,0,255,.2); }
+* * * * * { background-color: rgba(0,255,255,.2); }
+* * * * * * { background-color: rgba(255,255,0,.2); }
+* * * * * * * { background-color: rgba(255,0,0,.2); }
+* * * * * * * * { background-color: rgba(0,255,0,.2); }
+* * * * * * * * * { background-color: rgba(0,0,255,.2); } */
+
+@font-face {
+  font-family: 'Eurostile';
+  src: url('/static/fonts/EurostileLTStd.woff2') format('woff2'),
+      url('/static/fonts/EurostileLTStd.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Eurostile';
+  src: url('/static/fonts/EurostileLTStd-Demi.woff2') format('woff2'),
+      url('/static/fonts/EurostileLTStd-Demi.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Eurostile';
+  src: url('/static/fonts/EurostileLTStd-Bold.woff2') format('woff2'),
+      url('/static/fonts/EurostileLTStd-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+.slick-dots {
+  bottom: 6rem !important;
+}
+
+.slick-slider {
+  height: 100vh;
+}
