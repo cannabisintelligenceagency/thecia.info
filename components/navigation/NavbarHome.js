@@ -2,8 +2,13 @@ import { useEffect, useState } from 'react'
 import { RichText } from 'prismic-reactjs'
 import Link from 'next/link'
 import Prismic from 'prismic-javascript'
-import Burger from '../../node_modules/react-css-burger/dist/'
 import { Link as ScrollLink } from 'react-scroll'
+import dynamic from 'next/dynamic'
+
+const Burger = dynamic(
+  () => import('../../node_modules/react-css-burger/dist/'),
+  { ssr: false }
+)
 
 const NavbarHome = ({ nav }) => {
 
