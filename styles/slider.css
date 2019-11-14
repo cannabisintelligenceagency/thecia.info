@@ -17,6 +17,7 @@
     -ms-touch-action: pan-y;
         touch-action: pan-y;
     -webkit-tap-highlight-color: transparent;
+    height: 100vh;
 }
 
 .slick-list
@@ -126,7 +127,7 @@
 }
 
 /* Icons */
-/* @font-face
+@font-face
 {
     font-family: 'slick';
     font-weight: normal;
@@ -134,7 +135,7 @@
 
     src: url('/static/fonts/slick.eot');
     src: url('/static/fonts/slick.eot?#iefix') format('embedded-opentype'), url('/static/fonts/slick.woff') format('woff'), url('/static/fonts/slick.ttf') format('truetype'), url('/static/fonts/slick.svg#slick') format('svg');
-} */
+}
 /* Arrows */
 .slick-prev,
 .slick-next
@@ -242,7 +243,8 @@
 .slick-dots
 {
     position: absolute;
-    bottom: -25px;
+    /* bottom: -25px; */
+    bottom: 6rem;
 
     display: block;
 
@@ -323,18 +325,7 @@
     color: black;
 }
 
-.magic-dots.slick-dots ul{padding:0;display:flex;transition:all .2s;position:relative;margin:0}.magic-dots.slick-dots li.slick-active button:before{color:#00558b}.magic-dots.slick-dots li button:before{transition:font-size .35s;font-size:12px;content:"\2022"}.magic-dots.slick-dots li.small button:before{font-size:8px;line-height:20px}
-
 .magic-dots.slick-dots li.slick-active button:before {
   color: #fff !important;
 }
-
-.slick-dots {
-  bottom: 6rem !important;
-}
-
-.slick-slider {
-  height: 100vh;
-}
-
 /* purgecss end ignore */

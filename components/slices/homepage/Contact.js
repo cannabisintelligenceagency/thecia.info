@@ -9,13 +9,13 @@ const Contact = props => (
       </div>
       <div className="contact-column column-left">
         <h5 className="contact-column-header">On The Phone</h5>
-        <div className="contact-phone mb-6 md:mb-0">{props.slice.primary.phone}</div>
+        <div className="contact-phone">{props.slice.primary.phone}</div>
       </div>
       <div className="contact-column column-center">
         <h5 className="contact-column-header">Email</h5>
-        <div className="contact-info mb-6 md:mb-8">{props.slice.primary.email_1}</div>
+        <div className="contact-info">{props.slice.primary.email_1}</div>
         <h5 className="contact-column-header">Media Inquiries</h5>
-        <div className="contact-info mb-6 md:mb-0">{props.slice.primary.email_2}</div>
+        <div className="contact-info media">{props.slice.primary.email_2}</div>
       </div>
       <div className="contact-column column-right">
         <h5 className="contact-column-header">Our Address</h5>

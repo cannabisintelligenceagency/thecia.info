@@ -16,7 +16,7 @@ const SegmentationProfiles = props => (
             <div className="segmentation-profile-header">
               {item.title1}
             </div>
-            <div className="p-4 border-b border-l border-r rounded-b-lg text-center">
+            <div className="segmentation-profile-body">
               {RichText.render(item.description)}
             </div>
           </div>

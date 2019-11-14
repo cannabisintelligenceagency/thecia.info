@@ -126,6 +126,9 @@ footer {
 .segmentation-profile-header {
   @apply bg-black text-white uppercase text-center rounded-t-lg py-3;
 }
+.segmentation-profile-body {
+  @apply p-4 border-b border-l border-r rounded-b-lg text-center;
+}
 .segmentation-profile:last-child {
   @apply mb-0;
 }
@@ -160,7 +163,7 @@ footer {
   @apply text-center;
 }
 .contact {
-  @apply w-full bg-white text-black px-4 py-12;
+  @apply w-full bg-white text-black px-4 pt-12 pb-6;
 }
 .contact-header-container {
   @apply mb-6;
@@ -172,10 +175,10 @@ footer {
   @apply text-cia-600 font-medium text-lg;
 }
 .contact-info {
-  @apply text-lg;
+  @apply text-lg mb-6;
 }
 .contact-phone {
-  @apply text-xl;
+  @apply text-xl mb-6;
 }
 .footer-nav-container {
   @apply w-full;
@@ -256,6 +259,12 @@ footer {
   .contact {
     @apply py-24;
   }
+  .contact-info {
+    @apply mb-8;
+  }
+  .media {
+    @apply mb-0;
+  }
   .contact-header-container {
     @apply mb-10;
   }
@@ -267,6 +276,9 @@ footer {
   }
   .column-right {
     @apply pl-3;
+  }
+  .contact-phone {
+    @apply mb-0;
   }
   footer {
     @apply py-24;

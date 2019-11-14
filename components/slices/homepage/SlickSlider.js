@@ -1,6 +1,7 @@
-import '../../../styles/slider.css'
 import Slider from "react-slick"
+import '../../../styles/slider.css'
 import MagicSliderDots from 'react-magic-slider-dots'
+import 'react-magic-slider-dots/dist/magic-dots.css'
 
 const settings = {
   dots: true,
@@ -20,9 +21,11 @@ const SlickSlider = props => (
   <div id={props.slice.slice_type} >
     <Slider {...settings}>
       {props.slice.items.map((item, i) => (
-        <div className="w-full h-screen slider-image" key={i}>
+        <div className="slider-image" key={i}>
           <style jsx>{`
             .slider-image {
+              width: 100%;
+              height: 100vh;
               background-size: cover;
               background: url(${item.image.url}) no-repeat center center;
             }
