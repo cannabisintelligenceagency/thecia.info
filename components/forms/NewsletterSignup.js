@@ -20,7 +20,7 @@ function NewsletterSignup() {
       <input
         name="email"
         type="text"
-        className="form-input text-gray-800 w-full mb-2"
+        className="input text-gray-800 w-full mb-2"
         placeholder="Enter your email address"
         aria-label="email"
         required />

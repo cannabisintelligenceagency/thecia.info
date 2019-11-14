@@ -2,7 +2,6 @@ import '../../../styles/slider.css'
 import Slider from "react-slick"
 import MagicSliderDots from 'react-magic-slider-dots'
 
-
 const settings = {
   dots: true,
   arrows: false,
