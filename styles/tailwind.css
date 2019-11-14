@@ -33,6 +33,9 @@ footer {
 
 /* purgecss start ignore */
 
+.hide {
+  @apply hidden;
+}
 .transparent-nav {
   @apply bg-transparent pt-3;
 }

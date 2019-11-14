@@ -59,7 +59,7 @@ const NavbarHome = ({ nav }) => {
   }
 
   const scrollClass = scroll ? 'transparent-nav' : 'solid-nav'
-  const showHideClass = isOpen ? '' : 'hidden'
+  const showHideClass = isOpen ? '' : 'hide'
   const showHideFixedClass = isOpen ? 'bg-white' : ''
 
   return(
