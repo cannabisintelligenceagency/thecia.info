@@ -33,6 +33,12 @@ footer {
 
 /* purgecss start ignore */
 
+.transparent-nav {
+  @apply bg-transparent pt-3;
+}
+.solid-nav {
+  @apply bg-white shadow-md py-3;
+}
 .logo-container {
   @apply flex justify-between items-center flex-shrink-0;
 }
@@ -177,14 +183,17 @@ footer {
 .footer-signup {
   @apply mx-auto;
 }
+.footer-signup-message {
+  @apply text-base bg-cia-500 text-white p-3;
+}
 .signup-button {
   @apply bg-cia-500 py-3 text-white text-lg tracking-wide font-medium w-full rounded;
 }
 .footer-link {
   @apply uppercase tracking-wide float-left w-1/2 mb-1;
 }
-.input {
-  @apply appearance-none bg-white border-0 border-0 rounded py-2 px-3 text-base leading-normal;
+.signup-input {
+  @apply text-gray-800 w-full mb-2 appearance-none bg-white border-0 border-0 rounded py-2 px-3 text-base leading-normal;
 }
 /* purgecss end ignore */
 
@@ -346,6 +355,9 @@ footer {
 }
 
 @screen xl {
+  .transparent-nav {
+    @apply pt-6;
+  }
   p {
     @apply mb-6;
   }

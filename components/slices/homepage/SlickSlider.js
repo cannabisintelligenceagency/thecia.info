@@ -26,11 +26,6 @@ const SlickSlider = props => (
               background-size: cover;
               background: url(${item.image.url}) no-repeat center center;
             }
-            .tagline {
-              position: absolute;
-              top: 50%;
-              transform: translateY(-50%);
-            }
           `}</style>
         </div>
       ))}

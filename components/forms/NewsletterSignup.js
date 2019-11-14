@@ -9,7 +9,7 @@ function NewsletterSignup() {
 
   if (state.succeeded) {
     return(
-      <div className="footer-signup text-base bg-cia-500 text-white p-3">
+      <div className="footer-signup footer-signup-message">
         Thank you for signing up for our newsletter. We will not spam you and you may opt out at any time.
       </div>
     )
@@ -20,7 +20,7 @@ function NewsletterSignup() {
       <input
         name="email"
         type="text"
-        className="input text-gray-800 w-full mb-2"
+        className="signup-input"
         placeholder="Enter your email address"
         aria-label="email"
         required />

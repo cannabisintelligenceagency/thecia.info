@@ -58,7 +58,7 @@ const NavbarHome = ({ nav }) => {
     })
   }
 
-  const scrollClass = scroll ? 'bg-transparent pt-3 xl:pt-6' : 'bg-white shadow-md py-3'
+  const scrollClass = scroll ? 'transparent-nav' : 'solid-nav'
   const showHideClass = isOpen ? '' : 'hidden'
   const showHideFixedClass = isOpen ? 'bg-white' : ''
 
