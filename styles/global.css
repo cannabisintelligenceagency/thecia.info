@@ -9,6 +9,8 @@
 * * * * * * * * { background-color: rgba(0,255,0,.2); }
 * * * * * * * * * { background-color: rgba(0,0,255,.2); } */
 
+/* purgecss start ignore */
+
 @font-face {
   font-family: 'Eurostile';
   src: url('/static/fonts/EurostileLTStd.woff2') format('woff2'),
@@ -33,14 +35,4 @@
   font-style: normal;
 }
 
-.magic-dots.slick-dots li.slick-active button:before {
-  color: #fff !important;
-}
-
-.slick-dots {
-  bottom: 6rem !important;
-}
-
-.slick-slider {
-  height: 100vh;
-}
+/* purgecss end ignore */

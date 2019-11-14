@@ -1,0 +1,19 @@
+/* purgecss start ignore */
+
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+@import "~react-magic-slider-dots/dist/magic-dots.css";
+
+.magic-dots.slick-dots li.slick-active button:before {
+  color: #fff !important;
+}
+
+.slick-dots {
+  bottom: 6rem !important;
+}
+
+.slick-slider {
+  height: 100vh;
+}
+
+/* purgecss end ignore */
