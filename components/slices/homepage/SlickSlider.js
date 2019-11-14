@@ -1,7 +1,6 @@
 import Slider from "react-slick"
-import '../../../styles/slider.css'
 import MagicSliderDots from 'react-magic-slider-dots'
-import 'react-magic-slider-dots/dist/magic-dots.css'
+import '../../../styles/slider.css'
 
 const settings = {
   dots: true,
