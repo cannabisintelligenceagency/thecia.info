@@ -1,6 +1,6 @@
 import Prismic from 'prismic-javascript'
 
-const endPoint = "https://thecia.cdn.prismic.io/api/v2"
+const endPoint = process.env.PRISMIC
 
 const getNavigation = async() => {
   try {

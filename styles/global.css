@@ -33,6 +33,10 @@
   font-style: normal;
 }
 
+.magic-dots.slick-dots li.slick-active button:before {
+  color: #fff !important;
+}
+
 .slick-dots {
   bottom: 6rem !important;
 }

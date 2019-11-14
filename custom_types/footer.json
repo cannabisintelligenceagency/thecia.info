@@ -1,0 +1,57 @@
+{
+  "Main" : {
+    "name" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "heading6",
+        "label" : "Name",
+        "placeholder" : "Name as displayed in editor"
+      }
+    },
+    "signup_title" : {
+      "type" : "StructuredText",
+      "config" : {
+        "multi" : "paragraph",
+        "label" : "Signup Title",
+        "labels" : [ "font-medium" ],
+        "placeholder" : "Newsletter signup title"
+      }
+    },
+    "body" : {
+      "type" : "Slices",
+      "fieldset" : "Slice zone",
+      "config" : {
+        "labels" : {
+          "nav_item" : [ ],
+          "nav" : [ ]
+        },
+        "choices" : {
+          "nav" : {
+            "type" : "Slice",
+            "fieldset" : "Nav",
+            "description" : "Footer navigation",
+            "icon" : "link",
+            "display" : "grid",
+            "non-repeat" : { },
+            "repeat" : {
+              "label" : {
+                "type" : "Text",
+                "config" : {
+                  "label" : "Label",
+                  "placeholder" : "Label"
+                }
+              },
+              "link" : {
+                "type" : "Link",
+                "config" : {
+                  "label" : "Link",
+                  "placeholder" : "Link"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -4,13 +4,433 @@ body {
   @apply antialiased overflow-x-hidden font-body;
 }
 
+header {
+  @apply fixed w-full z-10;
+}
+
+header nav {
+  @apply mx-auto flex items-center justify-between flex-wrap;
+}
+
 p {
-  @apply mb-6;
+  @apply mb-4;
 }
 
 p:last-child {
   @apply mb-0;
 }
 
+footer {
+  @apply w-full flex bg-black text-white py-12 px-4;
+}
+
 @tailwind components;
+
+.logo-container {
+  @apply flex justify-between items-center flex-shrink-0;
+}
+.logo {
+  @apply flex items-center;
+}
+.logo img {
+  @apply w-24 ml-4;
+}
+.scroll-link {
+  @apply block font-medium uppercase tracking-wider text-center py-3;
+}
+.vision {
+  @apply w-full bg-cia-500 text-white py-12 px-4;
+}
+.vision-content h2, .segmentation-header, .team-header, .contact-header {
+  @apply uppercase tracking-wide font-medium text-xl;
+}
+.vision-content {
+  @apply ml-16;
+}
+.about {
+  @apply w-full bg-white py-12 px-4 ;
+}
+.about-header {
+  @apply w-full text-center mb-6;
+}
+.about-header h2, .about-header h3, .wwd-header h2, .wwd-header h3 {
+  @apply tracking-wide uppercase;
+}
+.about-header h2, .wwd-header h2 {
+  @apply font-medium text-xl;
+}
+.about-header h3, .wwd-header h3 {
+  @apply text-lg;
+}
+.about-header img, .wwd-header img {
+  @apply w-12;
+}
+.speech-bubble {
+  @apply border-4 border-cia-500 rounded-lg relative mb-6 p-6;
+}
+.triangle::before, .triangle::after {
+  @apply hidden;
+}
+.callout {
+  @apply uppercase leading-tight text-2xl;
+}
+.vision-column-left {
+  @apply mb-12;
+}
+.vision-icon {
+  @apply w-12 float-left;
+}
+.wwd {
+  @apply w-full py-12 px-4;
+}
+.wwd-header {
+  @apply w-full text-center text-white mb-6;
+}
+.wwd-content {
+  @apply text-white;
+}
+.segmentation {
+  @apply w-full bg-white px-4 py-12;
+}
+.segmentation-subtext {
+  @apply w-full text-center mb-6;
+}
+.segmentation-profile {
+  @apply w-full mb-4;
+}
+.segmentation-profile-header {
+  @apply bg-black text-white uppercase text-center rounded-t-lg py-3;
+}
+.segmentation-profile:last-child {
+  @apply mb-0;
+}
+.segmentation-header-container {
+  @apply mb-6;
+}
+.segmentation-header-container, .team-header-container, .contact-header-container  {
+  @apply w-full flex items-center justify-center;
+}
+.segmentation-header-container img, .team-header-container img, .contact-header-container img {
+  @apply w-12 mr-3;
+}
+.team {
+  @apply w-full bg-black text-white px-4 py-12;
+}
+.team-header-container {
+  @apply mb-12;
+}
+.team-member {
+  @apply w-full mb-12;
+}
+.team-member:last-child {
+  @apply mb-0;
+}
+.team-photo {
+  @apply w-32 rounded-full mx-auto mb-3;
+}
+.team-name {
+  @apply font-bold text-center;
+}
+.team-title {
+  @apply text-center;
+}
+.contact {
+  @apply w-full bg-white text-black px-4 py-12;
+}
+.contact-header-container {
+  @apply mb-6;
+}
+.contact-column {
+  @apply w-full text-center;
+}
+.contact-column-header {
+  @apply text-cia-500 font-medium text-lg;
+}
+.contact-info {
+  @apply text-lg;
+}
+.contact-phone {
+  @apply text-xl;
+}
+.footer-nav-container {
+  @apply w-full;
+}
+.signup-container {
+  @apply w-full text-center text-lg order-first mb-12;
+}
+.footer-signup {
+  @apply mx-auto;
+}
+.signup-button {
+  @apply bg-cia-500 py-3 text-white text-lg tracking-wide font-medium w-full rounded;
+}
+.footer-link {
+  @apply uppercase tracking-wide float-left w-1/2 mb-1;
+}
+
 @tailwind utilities;
+
+@screen sm {
+
+}
+
+@screen md {
+  .vision {
+    @apply py-24 flex items-center;
+  }
+  .vision-column-right {
+    @apply w-1/2 pl-12;
+  }
+  .vision-column-left {
+    @apply w-1/2 pr-12 mb-0;
+  }
+  .about {
+    @apply py-24;
+  }
+  .about-header {
+    @apply mb-10;
+  }
+  .about-content {
+    @apply w-7/12 ml-auto text-lg flex items-center;
+  }
+  .speech-bubble-container {
+    @apply w-4/12;
+  }
+  .triangle::before, .triangle::after {
+    @apply block;
+  }
+  .wwd {
+    @apply py-24;
+  }
+  .wwd-header {
+    @apply w-4/12 flex justify-center items-center mb-0;
+  }
+  .wwd-header img {
+    @apply w-12;
+  }
+  .wwd-content {
+    @apply w-8/12 text-xl leading-snug;
+  }
+  .segmentation-profile {
+    @apply w-1/2 px-3;
+  }
+  .team-member {
+    @apply w-1/3 mb-0;
+  }
+  .team-photo {
+    @apply w-24;
+  }
+  .team {
+    @apply py-24;
+  }
+  .contact {
+    @apply py-24;
+  }
+  .contact-header-container {
+    @apply mb-10;
+  }
+  .contact-column {
+    @apply w-1/3 text-left;
+  }
+  .column-center {
+    @apply px-3 border-r border-l border-gray-300;
+  }
+  .column-right {
+    @apply pl-3;
+  }
+  footer {
+    @apply py-24;
+  }
+  .footer-nav-container {
+    @apply w-1/2;
+  }
+  .signup-container {
+    @apply w-1/2 text-xl order-last mb-0;
+  }
+}
+
+@screen lg {
+  .scroll-link {
+    @apply py-3 inline-block mx-3;
+  }
+  .vision {
+    @apply py-32;
+  }
+  .vision-icon {
+    @apply w-16;
+  }
+  .vision-content {
+    @apply ml-24;
+  }
+  .vision-content p {
+    @apply text-xl;
+  }
+  .vision-content h2, .segmentation-header, .team-header, .contact-header {
+    @apply text-3xl;
+  }
+  .about-header {
+    @apply mb-12;
+  }
+  .about-header img {
+    @apply w-16;
+  }
+  .about-header h2, .wwd-header h2 {
+    @apply uppercase text-3xl tracking-wide font-medium;
+  }
+  .about-header h3, .wwd-header h3 {
+    @apply uppercase text-2xl tracking-wide;
+  }
+  .about-content {
+    @apply text-xl;
+  }
+  .speech-bubble {
+    @apply pl-10 pr-6 py-8 mb-0;
+  }
+  .callout {
+    @apply text-4xl;
+  }
+  .wwd-header img {
+    @apply w-16;
+  }
+  .wwd-content {
+    @apply w-7/12 ml-auto text-2xl;
+  }
+  .segmentation-profile {
+    @apply w-1/4 px-3;
+  }
+  .segmentation {
+    @apply pt-24 pb-12;
+  }
+  .contact-header-container {
+    @apply mb-12;
+  }
+  .column-center {
+    @apply px-6;
+  }
+  .column-right {
+    @apply pl-6;
+  }
+  .signup-container {
+    @apply text-xl;
+  }
+  .footer-signup {
+    @apply w-8/12;
+  }
+}
+
+@screen xl {
+  p {
+    @apply mb-6;
+  }
+  .logo img {
+    @apply w-40 ml-0;
+  }
+  .scroll-link {
+    @apply py-4 text-lg ml-12 mr-0;
+  }
+  .vision {
+    @apply h-screen py-0 px-0;
+  }
+  .vision-content p {
+    @apply text-2xl;
+  }
+  .vision-content h2, .segmentation-header, .team-header, .contact-header {
+    @apply text-4xl;
+  }
+  .about {
+    @apply py-32;
+  }
+  .about-header {
+    @apply mb-16;
+  }
+  .about-content {
+    @apply text-2xl;
+  }
+  .speech-bubble {
+    @apply px-12 py-10;
+  }
+  .callout {
+    @apply text-5xl;
+  }
+  .wwd {
+    @apply py-32;
+  }
+  .wwd-header img {
+    @apply w-20;
+  }
+  .about-header h2, .wwd-header h2 {
+    @apply text-4xl;
+  }
+  .about-header h3, .wwd-header h3 {
+    @apply text-3xl;
+  }
+  .wwd-content {
+    @apply text-3xl;
+  }
+  .segmentation {
+    @apply pt-32 pb-16 px-0;
+  }
+  .segmentation-header-container {
+    @apply mb-8;
+  }
+  .segmentation-header-container img, .team-header-container img, .contact-header-container img {
+    @apply w-16 mr-6;
+  }
+  .segmentation-subtext {
+    @apply text-2xl mb-8;
+  }
+  .segmentation-profile-header {
+    @apply py-4;
+  }
+  .team {
+    @apply py-32 px-0;
+  }
+  .team-header-container {
+    @apply mb-24;
+  }
+  .team-member {
+    @apply w-1/3 mb-0;
+  }
+  .team-photo {
+    @apply w-40 mb-6;
+  }
+  .team-name {
+    @apply text-2xl mb-1;
+  }
+  .team-title {
+    @apply text-xl;
+  }
+  .contact {
+    @apply py-32 px-0;
+  }
+  .contact-header-container {
+    @apply mb-16;
+  }
+  .contact-column-header {
+    @apply text-2xl;
+  }
+  .contact-phone {
+    @apply text-3xl;
+  }
+  .contact-info {
+    @apply text-2xl;
+  }
+  .column-center {
+    @apply px-12;
+  }
+  .column-left {
+    @apply pr-12;
+  }
+  .column-right {
+    @apply pl-12;
+  }
+  footer {
+    @apply py-32;
+  }
+  .signup-container {
+    @apply text-2xl;
+  }
+  .footer-link {
+    @apply text-xl;
+  }
+}

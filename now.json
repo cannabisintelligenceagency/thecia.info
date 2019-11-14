@@ -1,0 +1,26 @@
+{
+  "version": 2,
+  "builds": [
+    { "src": "next.config.js", "use": "@now/next" },
+    { "src": "server.js", "use": "@now/node-server" }
+  ],
+  "routes": [
+    { "src": "/robots.txt", "dest": "/robots.txt" },
+    { "src": "/preview", "dest": "/preview" },
+    { "src": "/(?<uid>[^/]+)$", "dest": "/page?uid=$uid" }
+  ],
+  "env": {
+    "PRISMIC": "@prismic",
+    "STATICKIT_DEPLOY_KEY": "@statickit_deploy_key",
+    "STATICKIT_SITE_ID": "@statickit_site_id",
+    "STATICKIT_SIGNUP_FORM_KEY": "@statickit_signup_form_key"
+  },
+  "build": {
+    "env": {
+      "PRISMIC": "@prismic",
+      "STATICKIT_DEPLOY_KEY": "@statickit_deploy_key",
+      "STATICKIT_SITE_ID": "@statickit_site_id",
+      "STATICKIT_SIGNUP_FORM_KEY": "@statickit_signup_form_key"
+    }
+  }
+}

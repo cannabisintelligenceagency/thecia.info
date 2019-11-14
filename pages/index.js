@@ -2,7 +2,7 @@ import React from 'react'
 import { getHomepage, getNavigation, getFooter } from '../helpers/api'
 import NavbarHome from '../components/navigation/NavbarHome'
 import HomeLayout from '../components/layouts/HomeLayout'
-import Slices from '../components/slices'
+import Slices from '../components/slices/homepage'
 import Meta from '../components/Meta'
 import Footer from '../components/Footer'
 
@@ -26,10 +26,10 @@ const Index = ({ doc, nav, footer }) =>
 
 
 Index.getInitialProps = async () => {
-  const doc = await getHomepage()
   const nav = await getNavigation()
+  const doc = await getHomepage()
   const footer = await getFooter()
-  return { doc, nav, footer }
+  return { nav, doc, footer }
 }
 
 export default Index

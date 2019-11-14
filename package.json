@@ -8,12 +8,15 @@
     "start": "NODE_ENV=production node server.js"
   },
   "dependencies": {
+    "@statickit/react": "^1.2.0",
     "@zeit/next-css": "^1.0.1",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "next": "9.1.2",
     "prismic-javascript": "^2.1.1",
     "prismic-reactjs": "^1.1.1",
     "react": "16.11.0",
+    "react-css-burger": "CleanStartBC/react-css-burger",
     "react-dom": "16.11.0",
     "react-magic-slider-dots": "^1.1.3",
     "react-scroll": "^1.7.14",
