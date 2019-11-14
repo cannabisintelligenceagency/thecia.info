@@ -1,3 +1,5 @@
+![alt text](https://images.prismic.io/thecia/f46c4131-5c9d-492d-bf34-bf8bd6e0b209_cia-logo-resized.png?auto=compress,format)
+
 # Cannabis Intelligence Agency Inc
 
 Consumers. Insights. **Action**.

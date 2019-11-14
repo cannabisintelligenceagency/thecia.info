@@ -12,7 +12,6 @@ const Meta = ({ doc }) =>
     <meta name="description" content={RichText.asText(doc.meta_description)} />
     <meta property="og:title" content={RichText.asText(doc.title)} />
     <meta property="og:image" content={doc.open_graph_image.url} />
-    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
   </Head>
 
 export default Meta

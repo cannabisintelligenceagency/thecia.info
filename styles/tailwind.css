@@ -1,3 +1,5 @@
+/* purgecss start ignore */
+
 @tailwind base;
 
 body {
@@ -24,7 +26,12 @@ footer {
   @apply w-full flex bg-black text-white py-12 px-4;
 }
 
+/* purgecss end ignore */
+
+
 @tailwind components;
+
+/* purgecss start ignore */
 
 .logo-container {
   @apply flex justify-between items-center flex-shrink-0;
@@ -35,11 +42,20 @@ footer {
 .logo img {
   @apply w-24 ml-4;
 }
+.burger-container {
+  @apply block pr-3;
+}
 .scroll-link {
   @apply block font-medium uppercase tracking-wider text-center py-3;
 }
+.navlinks-container {
+  @apply w-full;
+}
+.navlinks {
+  @apply mt-6;
+}
 .vision {
-  @apply w-full bg-cia-500 text-white py-12 px-4;
+  @apply w-full bg-cia-600 text-white py-12 px-4;
 }
 .vision-content h2, .segmentation-header, .team-header, .contact-header {
   @apply uppercase tracking-wide font-medium text-xl;
@@ -144,7 +160,7 @@ footer {
   @apply w-full text-center;
 }
 .contact-column-header {
-  @apply text-cia-500 font-medium text-lg;
+  @apply text-cia-600 font-medium text-lg;
 }
 .contact-info {
   @apply text-lg;
@@ -162,17 +178,17 @@ footer {
   @apply mx-auto;
 }
 .signup-button {
-  @apply bg-cia-500 py-3 text-white text-lg tracking-wide font-medium w-full rounded;
+  @apply bg-cia-600 py-3 text-white text-lg tracking-wide font-medium w-full rounded;
 }
 .footer-link {
   @apply uppercase tracking-wide float-left w-1/2 mb-1;
 }
 
+/* purgecss end ignore */
+
 @tailwind utilities;
 
-@screen sm {
-
-}
+/* purgecss start ignore */
 
 @screen md {
   .vision {
@@ -250,8 +266,17 @@ footer {
 }
 
 @screen lg {
+  .burger-container {
+    @apply hidden pr-0;
+  }
   .scroll-link {
     @apply py-3 inline-block mx-3;
+  }
+  .navlinks-container {
+    @apply flex items-center w-auto;
+  }
+  .navlinks {
+    @apply mt-0 flex-grow;
   }
   .vision {
     @apply py-32;
@@ -434,3 +459,5 @@ footer {
     @apply text-xl;
   }
 }
+
+/* purgecss end ignore */

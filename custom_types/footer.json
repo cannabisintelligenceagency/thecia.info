@@ -1,54 +1,63 @@
 {
-  "Main" : {
-    "name" : {
-      "type" : "StructuredText",
-      "config" : {
-        "single" : "heading6",
-        "label" : "Name",
-        "placeholder" : "Name as displayed in editor"
+  "Main": {
+    "name": {
+      "type": "StructuredText",
+      "config": {
+        "single": "heading6",
+        "label": "Name",
+        "placeholder": "Name as displayed in editor"
       }
     },
-    "signup_title" : {
-      "type" : "StructuredText",
-      "config" : {
-        "multi" : "paragraph",
-        "label" : "Signup Title",
-        "labels" : [ "font-medium" ],
-        "placeholder" : "Newsletter signup title"
+    "signup_title": {
+      "type": "StructuredText",
+      "config": {
+        "multi": "paragraph",
+        "label": "Signup Title",
+        "labels": [
+          "font-medium"
+        ],
+        "placeholder": "Newsletter signup title"
       }
     },
-    "body" : {
-      "type" : "Slices",
-      "fieldset" : "Slice zone",
-      "config" : {
-        "labels" : {
-          "nav_item" : [ ],
-          "nav" : [ ]
+    "body": {
+      "type": "Slices",
+      "fieldset": "Slice zone",
+      "config": {
+        "labels": {
+          "nav_item": [],
+          "nav": []
         },
-        "choices" : {
-          "nav" : {
-            "type" : "Slice",
-            "fieldset" : "Nav",
-            "description" : "Footer navigation",
-            "icon" : "link",
-            "display" : "grid",
-            "non-repeat" : { },
-            "repeat" : {
-              "label" : {
-                "type" : "Text",
-                "config" : {
-                  "label" : "Label",
-                  "placeholder" : "Label"
+        "choices": {
+          "nav_item": {
+            "type": "Slice",
+            "fieldset": "Nav Item",
+            "description": "Footer Nav Item",
+            "icon": "insert_link",
+            "non-repeat": {
+              "label": {
+                "type": "StructuredText",
+                "config": {
+                  "single": "paragraph",
+                  "label": "Label",
+                  "placeholder": "Enter Link Label..."
                 }
               },
-              "link" : {
-                "type" : "Link",
-                "config" : {
-                  "label" : "Link",
-                  "placeholder" : "Link"
+              "link": {
+                "type": "Link",
+                "config": {
+                  "label": "Link",
+                  "placeholder": "Select Link..."
+                }
+              },
+              "scroll_target": {
+                "type": "Text",
+                "config": {
+                  "label": "Scroll Target",
+                  "placeholder": "Scroll target"
                 }
               }
-            }
+            },
+            "display": "list"
           }
         }
       }

@@ -3,7 +3,7 @@ import { RichText } from 'prismic-reactjs'
 import Link from 'next/link'
 import Prismic from 'prismic-javascript'
 import Burger from '../../node_modules/react-css-burger/dist/'
-import { Link as ScrollLink, animateScroll } from 'react-scroll'
+import { Link as ScrollLink } from 'react-scroll'
 
 const NavbarHome = ({ nav }) => {
 
@@ -55,10 +55,10 @@ const NavbarHome = ({ nav }) => {
 
   const scrollClass = scroll ? 'bg-transparent pt-3 xl:pt-6' : 'bg-white shadow-md py-3'
   const showHideClass = isOpen ? '' : 'hidden'
-  const showHideFixedClass = isOpen ? 'topnav-fixed bg-white' : ''
+  const showHideFixedClass = isOpen ? 'bg-white' : ''
 
   return(
-    <header className={`${scrollClass}`}>
+    <header className={`${scrollClass} ${showHideFixedClass}`}>
       {nav && nav.data &&
         <nav className="container">
           <div className="logo-container">
@@ -73,8 +73,8 @@ const NavbarHome = ({ nav }) => {
               <img src={nav.data.site_logo.url} alt={RichText.asText(nav.data.site_name)} />
             </ScrollLink>
           </div>
-          <div className="block pr-3 lg:hidden">
-            {/* <Burger
+          <div className="burger-container">
+            <Burger
               onClick={toggle}
               active={isOpen}
               burger="squeeze"
@@ -82,10 +82,10 @@ const NavbarHome = ({ nav }) => {
               hoverOpacity={0.8}
               scale={1}
               marginTop='0.625rem'
-            /> */}
+            />
           </div>
-          <div className={`w-full lg:flex lg:items-center lg:w-auto ${showHideClass}`}>
-            <div className="mt-6 lg:mt-0 lg:flex-grow">
+          <div className={`navlinks-container ${showHideClass}`}>
+            <div className="navlinks">
               <NavLinks slices={nav.data.nav} />
             </div>
           </div>

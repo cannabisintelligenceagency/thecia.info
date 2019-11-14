@@ -1,337 +1,333 @@
 {
-  "Main": {
-    "uid": {
-      "type": "UID",
-      "config": {
-        "label": "Slug",
-        "placeholder": "SEO friendly URL"
+  "Main" : {
+    "uid" : {
+      "type" : "UID",
+      "config" : {
+        "label" : "Slug",
+        "placeholder" : "SEO friendly URL"
       }
     },
-    "meta_description": {
-      "type": "StructuredText",
-      "config": {
-        "single": "paragraph",
-        "label": "Meta Description",
-        "placeholder": "Description for search engines..."
+    "meta_description" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "paragraph",
+        "label" : "Meta Description",
+        "placeholder" : "Description for search engines..."
       }
     },
-    "open_graph_image": {
-      "type": "Image",
-      "config": {
-        "constraint": {
-          "width": 1200,
-          "height": 630
+    "open_graph_image" : {
+      "type" : "Image",
+      "config" : {
+        "constraint" : {
+          "width" : 1200,
+          "height" : 630
         },
-        "thumbnails": [
-          {
-            "name": "small",
-            "width": 600,
-            "height": 315
-          }
-        ],
-        "label": "Open Graph Image"
+        "thumbnails" : [ {
+          "name" : "small",
+          "width" : 600,
+          "height" : 315
+        } ],
+        "label" : "Open Graph Image"
       }
     },
-    "title": {
-      "type": "StructuredText",
-      "config": {
-        "single": "heading1",
-        "label": "Title",
-        "placeholder": "Title"
+    "title" : {
+      "type" : "StructuredText",
+      "config" : {
+        "single" : "heading1",
+        "label" : "Title",
+        "placeholder" : "Title"
       }
     },
-    "body": {
-      "type": "Slices",
-      "fieldset": "Slice zone",
-      "config": {
-        "labels": {
-          "slider": [],
-          "vision": [],
-          "about": [],
-          "what_we_do": [],
-          "consumer_tribe": [],
-          "team": [],
-          "contact": [],
-          "segmentation_gallery": [],
-          "segmentation_profiles": []
+    "body" : {
+      "type" : "Slices",
+      "fieldset" : "Slice zone",
+      "config" : {
+        "labels" : {
+          "slider" : [ ],
+          "vision" : [ ],
+          "about" : [ ],
+          "what_we_do" : [ ],
+          "consumer_tribe" : [ ],
+          "team" : [ ],
+          "contact" : [ ],
+          "segmentation_gallery" : [ ],
+          "segmentation_profiles" : [ ]
         },
-        "choices": {
-          "slider": {
-            "type": "Slice",
-            "fieldset": "Slider",
-            "description": "Homepage Slider",
-            "icon": "burst_mode",
-            "display": "list",
-            "non-repeat": {
-              "image": {
-                "type": "Image",
-                "config": {
-                  "constraint": {
-                    "width": null,
-                    "height": null
+        "choices" : {
+          "slider" : {
+            "type" : "Slice",
+            "fieldset" : "Slider",
+            "description" : "Homepage Slider",
+            "icon" : "burst_mode",
+            "display" : "list",
+            "non-repeat" : {
+              "image" : {
+                "type" : "Image",
+                "config" : {
+                  "constraint" : {
+                    "width" : null,
+                    "height" : null
                   },
-                  "thumbnails": [],
-                  "label": "Image"
+                  "thumbnails" : [ ],
+                  "label" : "Image"
                 }
               },
-              "tagline": {
-                "type": "StructuredText",
-                "config": {
-                  "single": "heading1",
-                  "label": "Tagline",
-                  "labels": {
-                    "": [
-                      {
-                        "name": "font-medium"
-                      }
-                    ]
+              "tagline" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "heading1",
+                  "label" : "Tagline",
+                  "labels" : {
+                    "" : [ {
+                      "name" : "font-medium"
+                    } ]
                   },
-                  "placeholder": "Tagline"
+                  "placeholder" : "Tagline"
                 }
               }
             },
-            "repeat": {
-              "image": {
-                "type": "Image",
-                "config": {
-                  "constraint": {},
-                  "thumbnails": [],
-                  "label": "Image"
+            "repeat" : {
+              "image" : {
+                "type" : "Image",
+                "config" : {
+                  "constraint" : { },
+                  "thumbnails" : [ ],
+                  "label" : "Image"
                 }
               }
             }
           },
-          "vision": {
-            "type": "Slice",
-            "fieldset": "Vision",
-            "description": "Homepage Section",
-            "icon": "wb_sunny",
-            "display": "list",
-            "non-repeat": {
-              "first_column": {
-                "type": "StructuredText",
-                "config": {
-                  "multi": "paragraph, heading2",
-                  "label": "First Column",
-                  "placeholder": "First Column"
+          "vision" : {
+            "type" : "Slice",
+            "fieldset" : "Vision",
+            "description" : "Homepage Section",
+            "icon" : "wb_sunny",
+            "display" : "list",
+            "non-repeat" : {
+              "first_column" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "multi" : "paragraph, heading2",
+                  "label" : "First Column",
+                  "placeholder" : "First Column"
                 }
               },
-              "second_column": {
-                "type": "StructuredText",
-                "config": {
-                  "multi": "paragraph, heading2",
-                  "label": "Second Column",
-                  "placeholder": "Second Column"
+              "second_column" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "multi" : "paragraph, heading2",
+                  "label" : "Second Column",
+                  "placeholder" : "Second Column"
                 }
               }
             },
-            "repeat": {}
+            "repeat" : { }
           },
-          "about": {
-            "type": "Slice",
-            "fieldset": "About",
-            "description": "Homepage Section",
-            "icon": "info_outline",
-            "display": "list",
-            "non-repeat": {
-              "title1": {
-                "type": "StructuredText",
-                "config": {
-                  "multi": "heading2, heading3",
-                  "label": "Title",
-                  "placeholder": "Title"
+          "about" : {
+            "type" : "Slice",
+            "fieldset" : "About",
+            "description" : "Homepage Section",
+            "icon" : "info_outline",
+            "display" : "list",
+            "non-repeat" : {
+              "title1" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "multi" : "heading2, heading3",
+                  "label" : "Title",
+                  "placeholder" : "Title"
                 }
               },
-              "callout": {
-                "type": "StructuredText",
-                "config": {
-                  "single": "paragraph",
-                  "label": "Callout",
-                  "placeholder": "Callout Text"
+              "callout" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "paragraph",
+                  "label" : "Callout",
+                  "placeholder" : "Callout Text"
                 }
               },
-              "description": {
-                "type": "StructuredText",
-                "config": {
-                  "multi": "paragraph",
-                  "label": "Description",
-                  "placeholder": "Description"
+              "description" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "multi" : "paragraph",
+                  "label" : "Description",
+                  "placeholder" : "Description"
                 }
               }
             },
-            "repeat": {}
+            "repeat" : { }
           },
-          "what_we_do": {
-            "type": "Slice",
-            "fieldset": "What We Do",
-            "description": "Hompage Section",
-            "icon": "playlist_add_check",
-            "display": "list",
-            "non-repeat": {
-              "title1": {
-                "type": "StructuredText",
-                "config": {
-                  "multi": "heading2, heading3",
-                  "label": "Title",
-                  "placeholder": "Title"
+          "what_we_do" : {
+            "type" : "Slice",
+            "fieldset" : "What We Do",
+            "description" : "Hompage Section",
+            "icon" : "playlist_add_check",
+            "display" : "list",
+            "non-repeat" : {
+              "title1" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "multi" : "heading2, heading3",
+                  "label" : "Title",
+                  "placeholder" : "Title"
                 }
               },
-              "description": {
-                "type": "StructuredText",
-                "config": {
-                  "multi": "paragraph, strong",
-                  "label": "Description",
-                  "placeholder": "Description"
+              "description" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "multi" : "paragraph, strong",
+                  "label" : "Description",
+                  "placeholder" : "Description"
                 }
               },
-              "background_image": {
-                "type": "Image",
-                "config": {
-                  "constraint": {},
-                  "thumbnails": [],
-                  "label": "Background Image"
+              "background_image" : {
+                "type" : "Image",
+                "config" : {
+                  "constraint" : { },
+                  "thumbnails" : [ ],
+                  "label" : "Background Image"
                 }
               }
             },
-            "repeat": {}
+            "repeat" : { }
           },
-          "segmentation_profiles": {
-            "type": "Slice",
-            "fieldset": "Segmentation Profiles",
-            "description": "Homepage Section",
-            "icon": "accessibility",
-            "display": "list",
-            "non-repeat": {
-              "title1": {
-                "type": "StructuredText",
-                "config": {
-                  "single": "heading2",
-                  "label": "Title",
-                  "placeholder": "Title"
+          "segmentation_profiles" : {
+            "type" : "Slice",
+            "fieldset" : "Segmentation Profiles",
+            "description" : "Homepage Section",
+            "icon" : "accessibility",
+            "display" : "list",
+            "non-repeat" : {
+              "title1" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "heading2",
+                  "label" : "Title",
+                  "placeholder" : "Title"
                 }
               },
-              "description": {
-                "type": "StructuredText",
-                "config": {
-                  "single": "paragraph",
-                  "label": "Description",
-                  "placeholder": "Description"
+              "description" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "paragraph",
+                  "label" : "Description",
+                  "placeholder" : "Description"
                 }
               },
-              "image": {
-                "type": "Image",
-                "config": {
-                  "constraint": {},
-                  "thumbnails": [],
-                  "label": "Image"
+              "image" : {
+                "type" : "Image",
+                "config" : {
+                  "constraint" : { },
+                  "thumbnails" : [ ],
+                  "label" : "Image"
                 }
               }
             },
-            "repeat": {
-              "title1": {
-                "type": "Text",
-                "config": {
-                  "label": "Title",
-                  "placeholder": "Segment Title"
+            "repeat" : {
+              "title1" : {
+                "type" : "Text",
+                "config" : {
+                  "label" : "Title",
+                  "placeholder" : "Segment Title"
                 }
               },
-              "description": {
-                "type": "StructuredText",
-                "config": {
-                  "single": "paragraph, list-item",
-                  "label": "Description",
-                  "placeholder": "Segment Description"
+              "description" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "paragraph, list-item",
+                  "label" : "Description",
+                  "placeholder" : "Segment Description"
                 }
               }
             }
           },
-          "team": {
-            "type": "Slice",
-            "fieldset": "Team",
-            "description": "Homepage Section",
-            "icon": "people",
-            "display": "grid",
-            "non-repeat": {
-              "title1": {
-                "type": "StructuredText",
-                "config": {
-                  "single": "heading2",
-                  "label": "Title",
-                  "placeholder": "Title"
+          "team" : {
+            "type" : "Slice",
+            "fieldset" : "Team",
+            "description" : "Homepage Section",
+            "icon" : "people",
+            "display" : "grid",
+            "non-repeat" : {
+              "title1" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "heading2",
+                  "label" : "Title",
+                  "placeholder" : "Title"
                 }
               }
             },
-            "repeat": {
-              "image": {
-                "type": "Image",
-                "config": {
-                  "constraint": {},
-                  "thumbnails": [],
-                  "label": "Image"
+            "repeat" : {
+              "image" : {
+                "type" : "Image",
+                "config" : {
+                  "constraint" : { },
+                  "thumbnails" : [ ],
+                  "label" : "Image"
                 }
               },
-              "name": {
-                "type": "Text",
-                "config": {
-                  "label": "Name",
-                  "placeholder": "Name"
+              "name" : {
+                "type" : "Text",
+                "config" : {
+                  "label" : "Name",
+                  "placeholder" : "Name"
                 }
               },
-              "job_title": {
-                "type": "Text",
-                "config": {
-                  "label": "Job Title",
-                  "placeholder": "Job title"
+              "job_title" : {
+                "type" : "Text",
+                "config" : {
+                  "label" : "Job Title",
+                  "placeholder" : "Job title"
                 }
               }
             }
           },
-          "contact": {
-            "type": "Slice",
-            "fieldset": "Contact",
-            "description": "Homepage Section",
-            "icon": "contact_mail",
-            "display": "grid",
-            "non-repeat": {
-              "title1": {
-                "type": "StructuredText",
-                "config": {
-                  "single": "heading2",
-                  "label": "Title",
-                  "placeholder": "Title"
+          "contact" : {
+            "type" : "Slice",
+            "fieldset" : "Contact",
+            "description" : "Homepage Section",
+            "icon" : "contact_mail",
+            "display" : "grid",
+            "non-repeat" : {
+              "title1" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "heading2",
+                  "label" : "Title",
+                  "placeholder" : "Title"
                 }
               },
-              "phone": {
-                "type": "Text",
-                "config": {
-                  "label": "Phone",
-                  "placeholder": "Phone"
+              "phone" : {
+                "type" : "Text",
+                "config" : {
+                  "label" : "Phone",
+                  "placeholder" : "Phone"
                 }
               },
-              "email_1": {
-                "type": "Text",
-                "config": {
-                  "label": "Email 1",
-                  "placeholder": "Email 1"
+              "email_1" : {
+                "type" : "Text",
+                "config" : {
+                  "label" : "Email 1",
+                  "placeholder" : "Email 1"
                 }
               },
-              "email_2": {
-                "type": "Text",
-                "config": {
-                  "label": "Email 2",
-                  "placeholder": "Email 2"
+              "email_2" : {
+                "type" : "Text",
+                "config" : {
+                  "label" : "Email 2",
+                  "placeholder" : "Email 2"
                 }
               },
-              "address": {
-                "type": "StructuredText",
-                "config": {
-                  "single": "paragraph",
-                  "label": "Address",
-                  "placeholder": "Address"
+              "address" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "single" : "paragraph",
+                  "label" : "Address",
+                  "placeholder" : "Address"
                 }
               }
             },
-            "repeat": {}
+            "repeat" : { }
           }
         }
       }

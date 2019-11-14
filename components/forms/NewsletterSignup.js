@@ -17,14 +17,13 @@ function NewsletterSignup() {
 
   return(
     <form className="footer-signup" onSubmit={submit}>
-      <label htmlFor="email" className="block w-full">
-        <input
-          name="email"
-          type="text"
-          className="form-input text-gray-600 w-full mb-2"
-          placeholder="Enter your email address"
-          required />
-      </label>
+      <input
+        name="email"
+        type="text"
+        className="form-input text-gray-800 w-full mb-2"
+        placeholder="Enter your email address"
+        aria-label="email"
+        required />
       <input type="submit" className="signup-button" />
     </form>
   )
