@@ -1,6 +1,6 @@
 import { Fragment, useState } from 'react'
 import { getResource} from '../../helpers/api'
-import Navbar from '../../components/Navbar'
+// import Navbar from '../../components/Navbar'
 
 import Slices from '../../components/slices/page'
 import Meta from '../../components/Meta'
@@ -19,10 +19,10 @@ const Resource = ({ doc, settings }) => {
       </Head>
       <Meta doc={doc.data} />
       <PageStyle />
-      <Navbar
+      {/* <Navbar
         siteSettings={settings}
         navId={doc.data.navbar.id}
-      />
+      /> */}
 
 
         <div className="py-16 w-full bg-cia-500 text-white">

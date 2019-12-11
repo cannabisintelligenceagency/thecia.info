@@ -67,7 +67,7 @@ const Page = ({ doc, settings }) =>
 
 
       {doc && renderSlices(doc.data.body)}
-      <Footer />
+      {/* <Footer /> */}
 
   </Fragment>
 
