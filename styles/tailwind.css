@@ -228,10 +228,10 @@ footer {
   @apply text-cia-600 font-medium text-lg;
 }
 .contact-info {
-  @apply text-lg mb-6 font-montserrat font-medium;
+  @apply text-lg mb-6 font-montserrat;
 }
 .contact-phone {
-  @apply text-xl mb-6 font-montserrat font-medium;
+  @apply text-xl mb-6 font-montserrat;
 }
 .footer-nav-container {
   @apply w-full;

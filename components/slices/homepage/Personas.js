@@ -38,17 +38,19 @@ const Personas = props => {
   }
   return (
     <div className="persona-container">
-      <Swiper {...params}>
-        {props.slice.items.map((item, i) => (
-          <div className="img-container" key={i}>
-            <img src={item.image.url} alt={item.image.alt} />
-            <span
-              className="persona-content">
-                {item.text[0].text}
-              </span>
-          </div>
-        ))}
-      </Swiper>
+      {(props.slice.items && props.slice.items.length > 0) &&
+        <Swiper {...params}>
+          {props.slice.items.map((item, i) => (
+            <div className="img-container" key={i}>
+              <img src={item.image.url} alt={item.image.alt} />
+              <span
+                className="persona-content">
+                  {item.text[0].text}
+                </span>
+            </div>
+          ))}
+        </Swiper>
+      }
     </div>
   )
 };
