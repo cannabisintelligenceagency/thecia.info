@@ -284,6 +284,21 @@ footer {
   .about-content {
     @apply w-7/12 ml-auto text-lg flex items-center;
   }
+  .about-content ul {
+    @apply pl-8;
+  }
+  .about-content li:before {
+    font-family: 'Font Awesome 5 Free';
+    content: '\f00c';
+    font-weight: 900;
+    margin-right: 1rem;
+    color: #D9D458;
+    margin-left: -2rem;
+    width: 1rem;
+  }
+  .about-content li {
+    @apply mb-4;
+  }
   .speech-bubble-container {
     @apply w-4/12;
   }
