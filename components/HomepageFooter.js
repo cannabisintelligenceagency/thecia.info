@@ -53,8 +53,8 @@ const HomepageFooter = ({ footerNavId }) => {
         </div>
         <div className="signup-container">
           <div className="mb-6">
-            Don't miss a thing <br/>
-            <span className="font-semibold">Sign up for our newsletter today</span>
+            Don't miss a thing!<br/>
+            <span className="font-semibold">Subscribe to our mailing list</span>
           </div>
           <NewsletterSignup />
         </div>
