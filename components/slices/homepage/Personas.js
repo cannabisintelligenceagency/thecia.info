@@ -18,6 +18,8 @@ const Personas = props => {
     },
     rebuildOnUpdate: true,
     shouldSwiperUpdate: true,
+    observer:true,
+    observeParents: true,
     breakpoints: {
       1024: {
         slidesPerView: 4
@@ -37,6 +39,7 @@ const Personas = props => {
       }
     }
   }
+
   return (
     <div className="persona-container">
       {(props.slice.items && props.slice.items.length > 0) &&
