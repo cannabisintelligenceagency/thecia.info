@@ -14,8 +14,8 @@ const Contact = props => (
       <div className="contact-column column-center">
         <h5 className="contact-column-header">Email</h5>
         <div className="contact-info">{props.slice.primary.email_1}</div>
-        <h5 className="contact-column-header">Media Inquiries</h5>
-        <div className="contact-info media">{props.slice.primary.email_2}</div>
+        {/* <h5 className="contact-column-header">Media Inquiries</h5>
+        <div className="contact-info media">{props.slice.primary.email_2}</div> */}
       </div>
       <div className="contact-column column-right">
         <h5 className="contact-column-header">Our Address</h5>
