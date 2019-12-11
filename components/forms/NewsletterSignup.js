@@ -24,7 +24,7 @@ function NewsletterSignup() {
         placeholder="Enter your email address"
         aria-label="email"
         required />
-      <input type="submit" className="signup-button" />
+      <input type="submit" value="Sign up for updates" className="signup-button" />
     </form>
   )
 }

@@ -11,7 +11,7 @@ const Team = props => (
         <div className="team-member" key={i}>
           <img src={item.image.url} alt={item.image.alt} className="team-photo" />
           <h5 className="team-name">{item.name}</h5>
-          <h6 className="team-title">{item.job_title}</h6>
+          <p className="team-title">{item.job_title}</p>
         </div>
       ))}
     </div>

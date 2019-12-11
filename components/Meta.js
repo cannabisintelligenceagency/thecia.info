@@ -9,9 +9,9 @@ const Meta = ({ doc }) =>
       content="initial-scale=1.0, width=device-width"
       key="viewport"
     />
-    <meta name="description" content={RichText.asText(doc.meta_description)} />
-    <meta property="og:title" content={RichText.asText(doc.title)} />
-    <meta property="og:image" content={doc.open_graph_image.url} />
+    {doc.title &&  <meta property="og:title" content={RichText.asText(doc.title)} />}
+    {doc.meta_description && <meta name="description" content={RichText.asText(doc.meta_description)} />}
+    {doc.open_graph_image && doc.open_graph_image.url && <meta property="og:image" content={doc.open_graph_image.url} />}
   </Head>
 
 export default Meta

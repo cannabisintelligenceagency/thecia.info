@@ -1,10 +1,9 @@
-import React from 'react'
-import { getHomepage, getNavigation, getFooter } from '../helpers/api'
-import NavbarHome from '../components/navigation/NavbarHome'
-import HomeLayout from '../components/layouts/HomeLayout'
+import { Fragment } from 'react'
+import { getHomepage } from '../helpers/api'
 import Slices from '../components/slices/homepage'
 import Meta from '../components/Meta'
-import Footer from '../components/Footer'
+import HomepageNavbar from '../components/HomepageNavbar'
+import HomepageFooter from '../components/HomepageFooter'
 
 const renderSlices = arr => {
   if (arr.length === 0) {
@@ -14,22 +13,23 @@ const renderSlices = arr => {
   }
 }
 
-const Index = ({ doc, nav, footer }) =>
-  <React.Fragment>
+const Index = ({ doc, settings }) =>
+  <Fragment>
     <Meta doc={doc.data} />
-    <HomeLayout>
-      <NavbarHome nav={nav} />
-      {doc && renderSlices(doc.data.body)}
-      <Footer footer={footer} />
-    </HomeLayout>
-  </React.Fragment>
+    <HomepageNavbar
+      siteSettings={settings}
+      navId={doc.data.navbar.id}
+    />
+    {doc && renderSlices(doc.data.body)}
+    {doc.data.footer_navbar && doc.data.footer_navbar.id &&
+      <HomepageFooter footerNavId={doc.data.footer_navbar.id} />
+    }
+  </Fragment>
 
 
-Index.getInitialProps = async () => {
-  const nav = await getNavigation()
+Index.getInitialProps = async context => {
   const doc = await getHomepage()
-  const footer = await getFooter()
-  return { nav, doc, footer }
+  return { doc }
 }
 
 export default Index

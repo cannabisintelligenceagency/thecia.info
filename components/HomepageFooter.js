@@ -1,3 +1,5 @@
+import { useState, useEffect } from 'react'
+import { getNavigation } from '../helpers/api'
 import { RichText } from 'prismic-reactjs'
 import NewsletterSignup from './forms/NewsletterSignup'
 import { Link as ScrollLink } from 'react-scroll'
@@ -26,22 +28,40 @@ const FooterLinks = props => {
   })
 }
 
-const Footer = ({ footer }) => (
-  <footer>
-    {footer && footer.data &&
-      <div className="container mx-auto flex flex-wrap">
+const HomepageFooter = ({ footerNavId }) => {
+  const [ nav, setNav ] = useState({})
+
+  useEffect(
+    () => {
+      const fetchNav = async () => {
+        const res = await getNavigation(footerNavId)
+        setNav(res)
+      }
+      fetchNav()
+    },[]
+  )
+
+  return(
+    <footer>
+      <div className="container mx-auto flex flex-wrap items-center">
         <div className="footer-nav-container">
-          <ul>
-            <FooterLinks slices={footer.data.body} />
-          </ul>
+          {nav && nav.data &&
+            <ul>
+              <FooterLinks slices={nav.data.body} />
+            </ul>
+          }
         </div>
         <div className="signup-container">
-          {RichText.render(footer.data.signup_title)}
+          <div className="mb-6">
+            Don't miss a thing <br/>
+            <span className="font-semibold">Sign up for our newsletter today</span>
+          </div>
           <NewsletterSignup />
         </div>
       </div>
-    }
-  </footer>
-)
+    </footer>
+  )
+}
 
-export default Footer
+
+export default HomepageFooter

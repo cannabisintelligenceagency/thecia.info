@@ -23,7 +23,6 @@ module.exports = {
       md: '768px',
       lg: '1024px',
       xl: '1280px',
-      // xl: '1140px',
     },
     colors: {
       transparent: 'transparent',
@@ -265,7 +264,9 @@ module.exports = {
         '"Courier New"',
         'monospace',
       ],
-      body: ['Eurostile', 'sans-serif'],
+      eurostile: ['Eurostile', 'sans-serif'],
+      work: ['Work Sans', 'sans-serif'],
+      montserrat: ['Montserrat', 'sans-serif'],
     },
     fontSize: {
       xs: '0.75rem',

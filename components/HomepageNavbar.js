@@ -1,19 +1,29 @@
 import { useEffect, useState } from 'react'
-import { RichText } from 'prismic-reactjs'
-import Link from 'next/link'
-import Prismic from 'prismic-javascript'
-import { Link as ScrollLink } from 'react-scroll'
 import dynamic from 'next/dynamic'
+import { Link as ScrollLink } from 'react-scroll'
+import { getNavigation } from '../helpers/api'
+import NavLinks from './NavLinks'
 
 const Burger = dynamic(
-  () => import('../../node_modules/react-css-burger/dist/'),
+  () => import('../node_modules/react-css-burger/dist/'),
   { ssr: false }
 )
 
-const NavbarHome = ({ nav }) => {
+const HomepageNavbar = ({ siteSettings, navId }) => {
 
   const [ scroll, setScroll ] = useState(1)
   const [ isOpen, setIsOpen ] = useState(false)
+  const [ nav, setNav ] = useState({})
+
+  useEffect(
+    () => {
+      const fetchNav = async () => {
+        const res = await getNavigation(navId)
+        setNav(res)
+      }
+      fetchNav()
+    },[]
+  )
 
   useEffect(
     () => {
@@ -34,37 +44,13 @@ const NavbarHome = ({ nav }) => {
     setIsOpen(false)
 	}
 
-  const NavLinks = props => {
-    return props.slices.map((slice, i) => {
-      if (slice.slice_type === 'nav_item') {
-        return(
-          <ScrollLink href="/"
-            className="scroll-link"
-            key={i}
-            activeClass="text-cia-500"
-            to={`${slice.primary.scroll_target}`}
-            spy={true}
-            smooth={true}
-            offset={-84}
-            duration={400}
-            onClick={closeNavbar}
-          >
-            {RichText.asText(slice.primary.label)}
-          </ScrollLink>
-        )
-      } else {
-        return null
-      }
-    })
-  }
-
   const scrollClass = scroll ? 'transparent-nav' : 'solid-nav'
   const showHideClass = isOpen ? '' : 'hide'
   const showHideFixedClass = isOpen ? 'bg-white' : ''
 
   return(
     <header className={`${scrollClass} ${showHideFixedClass}`}>
-      {nav && nav.data &&
+      {siteSettings && siteSettings.data &&
         <nav className="container">
           <div className="logo-container">
             <ScrollLink href="/"
@@ -75,7 +61,7 @@ const NavbarHome = ({ nav }) => {
               duration={400}
               onClick={closeNavbar}
             >
-              <img src={nav.data.site_logo.url} alt={RichText.asText(nav.data.site_name)} />
+              <img src={siteSettings.data.brand_logo.url} alt={siteSettings.data.site_name[0].text} />
             </ScrollLink>
           </div>
           <div className="burger-container">
@@ -86,18 +72,20 @@ const NavbarHome = ({ nav }) => {
               color="#4CB348"
               hoverOpacity={0.8}
               scale={1}
-              marginTop='0.625rem'
+              marginTop='0.5rem'
             />
           </div>
-          <div className={`navlinks-container ${showHideClass}`}>
-            <div className="navlinks">
-              <NavLinks slices={nav.data.nav} />
+          {nav && nav.data &&
+            <div className={`navlinks-container ${showHideClass}`}>
+              <div className="navlinks">
+                <NavLinks slices={nav.data.body} closeNavbar={closeNavbar} />
+              </div>
             </div>
-          </div>
+          }
         </nav>
       }
     </header>
   )
 
 }
-export default NavbarHome
+export default HomepageNavbar

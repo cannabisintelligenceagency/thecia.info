@@ -17,7 +17,6 @@
     -ms-touch-action: pan-y;
         touch-action: pan-y;
     -webkit-tap-highlight-color: transparent;
-    height: 100vh;
 }
 
 .slick-list
@@ -242,9 +241,11 @@
 
 .slick-dots
 {
-    position: absolute;
-    /* bottom: -25px; */
-    bottom: 6rem;
+    position: absolute !important;
+    bottom: 1rem;
+    /* bottom: 6rem; */
+    left: 50%;
+    transform: translateX(-50%);
 
     display: block;
 
@@ -329,5 +330,15 @@
 
 .magic-dots.slick-dots li.slick-active button:before {
   color: #fff !important;
+}
+
+.slick-track
+{
+    display: flex !important;
+}
+
+.slick-slide
+{
+    height: inherit !important;
 }
 /* purgecss end ignore */
