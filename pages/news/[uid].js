@@ -4,7 +4,7 @@ import NavbarVariant from '../../components/NavbarVariant'
 import Slices from '../../components/slices/page'
 import Meta from '../../components/Meta'
 import PageStyle from '../../components/PageStyle'
-import Footer from '../../components/Footer'
+// import Footer from '../../components/Footer'
 import { RichText } from 'prismic-reactjs'
 
 const renderSlices = arr => {
@@ -41,7 +41,7 @@ const Post = ({ doc, settings, footer }) =>
       </div>
 
       {doc && doc.data.body && renderSlices(doc.data.body)}
-      <Footer footer={footer} />
+      {/* <Footer footer={footer} /> */}
 
   </Fragment>
 
