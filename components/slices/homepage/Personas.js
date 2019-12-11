@@ -9,6 +9,7 @@ const Personas = props => {
     centeredSlides: true,
     loop: true,
     slidesPerView: 4,
+    observer: true,
     coverflowEffect: {
       rotate: 0,
       stretch: 0,
@@ -38,7 +39,7 @@ const Personas = props => {
   return (
     <div className="persona-container">
       {(props.slice.items && props.slice.items.length > 0) &&
-        <Swiper {...params}>
+        <Swiper {...params} rebuildOnUpdate>
           {props.slice.items.map((item, i) => (
             <div className="img-container" key={i}>
               <img src={item.image.url} alt={item.image.alt} />
