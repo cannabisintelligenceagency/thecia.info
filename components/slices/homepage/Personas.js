@@ -7,7 +7,6 @@ const Personas = props => {
     effect: 'coverflow',
     grabCursor: true,
     centeredSlides: true,
-    slidesPerView: 'auto',
     loop: true,
     slidesPerView: 4,
     coverflowEffect: {
