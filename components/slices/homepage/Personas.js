@@ -1,6 +1,6 @@
 import React from 'react'
 import Swiper from 'react-id-swiper'
-import 'swiper/css/swiper.css'
+import '../../../styles/swiper.css'
 
 const Personas = props => {
   const params = {
