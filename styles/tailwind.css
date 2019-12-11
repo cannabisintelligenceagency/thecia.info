@@ -122,13 +122,10 @@ footer {
   @apply text-white font-montserrat;
 }
 .services-container {
-  @apply pt-16 pb-12 bg-gray-100;
+  @apply pt-16 pb-12 bg-gray-200;
 }
 .service-column {
   @apply w-full px-3 mb-6;
-}
-.service {
-  @apply shadow;
 }
 .services-description {
   @apply w-full text-white bg-cia-500 pl-6 py-6;
