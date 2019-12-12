@@ -17,13 +17,13 @@ const renderSlices = arr => {
 
 const Page = ({ doc, settings }) =>
   <Fragment>
-
-    <Meta doc={doc.data} />
+    <p>Blank Page</p>
+    {/* <Meta doc={doc.data} />
     <PageStyle />
     <NavbarVariant
       siteSettings={settings}
       navId={doc.data.navbar.id}
-    />
+    /> */}
       {/* <div className="py-16 w-full bg-cia-500 text-white">
         <div className="container mx-auto">
           <div className="flex items-center">
@@ -37,7 +37,7 @@ const Page = ({ doc, settings }) =>
 
 
 
-        <div className="bg-grey-100 text-gray-800">
+        {/* <div className="bg-grey-100 text-gray-800">
           <div className="mx-auto">
             <div className="relative">
               <div className="relative lg:flex overflow-hidden">
@@ -62,11 +62,11 @@ const Page = ({ doc, settings }) =>
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
 
 
 
-      {doc && renderSlices(doc.data.body)}
+      {/* {doc && renderSlices(doc.data.body)} */}
       {/* <Footer /> */}
 
   </Fragment>
