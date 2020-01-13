@@ -2,7 +2,7 @@
 
 The CIA landing page version 1.
 
-**Tech / Vendors**
+**Technology / Vendors**
 
 - React / NextJS
 - Deployed on Now Serverless by Zeit
