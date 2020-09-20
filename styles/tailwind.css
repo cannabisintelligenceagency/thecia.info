@@ -11,7 +11,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 header {
-  @apply fixed top-0 w-full z-10;
+  @apply fixed top-0 w-full z-20;
 }
 
 header nav {
@@ -128,7 +128,7 @@ footer {
   @apply w-full px-3 mb-6;
 }
 .services-description {
-  @apply w-full text-white bg-cia-500 pl-6 py-6;
+  @apply w-full text-white bg-black pl-6 py-6;
 }
 .service-body {
   @apply font-montserrat;
@@ -525,7 +525,7 @@ footer {
     @apply py-4 text-lg ml-12 mr-0;
   }
   .vision {
-    @apply h-screen py-0 px-0;
+    @apply py-24 px-0;
   }
   .vision-content p {
     @apply text-2xl;

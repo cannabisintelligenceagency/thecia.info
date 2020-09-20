@@ -3,7 +3,7 @@ import { RichText } from 'prismic-reactjs'
 
 const Services = props =>
   <div className="services-container" id={props.slice.slice_type}>
-    <div className="container mx-auto flex flex-wrap">
+    <div className="container mx-auto flex flex-wrap relative z-10">
       <div className="services-header-container">
         <img src="https://images.prismic.io/thecia/3dafb445-8cc7-4ca4-a5c9-4e6c2b00c321_rsz_cia-shield-final-color.png" alt="Cannabis Intelligence Agency Inc." />
         <h2 className="services-header">Our Services</h2>
@@ -25,6 +25,23 @@ const Services = props =>
         </div>
       ))}
     </div>
+    <style jsx>{`
+      .services-container {
+        background: url(${props.slice.primary.background_image.url}) no-repeat center;
+        background-size: cover;
+        position: relative;
+      }
+      .services-container::after {
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-color: rgba(255,255,255,0.8);
+        z-index: 0;
+      }
+    `}</style>
   </div>
 
 export default Services
