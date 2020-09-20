@@ -29,17 +29,6 @@ const Services = props =>
       .services-container {
         background: url(${props.slice.primary.background_image.url}) no-repeat center;
         background-size: cover;
-        position: relative;
-      }
-      .services-container::after {
-        position: absolute;
-        content: '';
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        background-color: rgba(255,255,255,0.8);
-        z-index: 0;
       }
     `}</style>
   </div>

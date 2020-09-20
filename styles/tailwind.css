@@ -82,6 +82,9 @@ footer {
 .about-content {
   @apply font-montserrat;
 }
+.about-subheader {
+  @apply text-center text-cia-500 uppercase font-medium font-eurostile;
+}
 .about-header {
   @apply w-full text-center mb-6;
 }
@@ -122,7 +125,12 @@ footer {
   @apply text-white font-montserrat;
 }
 .services-container {
-  @apply pt-16 pb-12 bg-gray-200;
+  @apply relative pt-16 pb-12 bg-gray-200;
+}
+.services-container::after {
+  @apply absolute top-0 left-0 right-0 bottom-0 z-0;
+  content: '';
+  background-color: rgba(255,255,255,0.8);
 }
 .service-column {
   @apply w-full px-3 mb-6;
@@ -229,6 +237,12 @@ footer {
 }
 .contact-phone {
   @apply text-xl mb-6 font-montserrat;
+}
+.contact-image-text {
+  @apply inline-block font-bold mb-3;
+}
+.contact-image {
+  @apply h-20;
 }
 .footer-nav-container {
   @apply w-full;

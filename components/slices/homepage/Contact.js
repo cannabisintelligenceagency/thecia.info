@@ -24,8 +24,8 @@ const Contact = props => (
         </div> */}
 
         <div className="contact-column column-right">
-          <span className="inline-block font-bold mb-3">Proud research partner of</span>
-          <img src="https://images.prismic.io/thecia/296f7666-2685-43c7-99b6-820fbf48bbce_mcba.png?auto=compress,format"  class="h-20"/>
+          <span className="contact-image-text">Proud research partner of</span>
+          <img src="https://images.prismic.io/thecia/296f7666-2685-43c7-99b6-820fbf48bbce_mcba.png?auto=compress,format"  className="contact-image"/>
         </div>
 
     </div>
