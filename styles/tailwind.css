@@ -133,7 +133,7 @@ footer {
   background-color: rgba(255,255,255,0.8);
 }
 .service-column {
-  @apply w-full px-3 mb-6;
+  @apply w-full px-3 mb-6 z-10 relative;
 }
 .services-description {
   @apply w-full text-white bg-black pl-6 py-6;
@@ -143,6 +143,9 @@ footer {
 }
 .service-title {
   @apply uppercase tracking-wide font-eurostile text-lg font-medium mb-2;
+}
+.services-header-container {
+  @apply relative z-10;
 }
 .shield-icon {
   @apply hidden;
