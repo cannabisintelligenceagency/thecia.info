@@ -7,6 +7,7 @@ import SegmentationProfiles from './SegmentationProfiles'
 import Team from './Team'
 import Contact from './Contact'
 import Personas from './Personas'
+import CIATabs from './CIATabs'
 
 export default props => {
   return props.sliceZone.map((slice, i) => {
@@ -21,6 +22,8 @@ export default props => {
         return <WhatWeDo slice={slice} key={i} />
       case("services"):
         return <Services slice={slice} key={i} />
+      case("tabs"):
+        return <CIATabs slice={slice} key={i} />
       case("segmentation_profiles"):
         return <SegmentationProfiles slice={slice} key={i} />
       case("team"):
