@@ -29,7 +29,7 @@
     "next-cookies": "^2.0.1",
     "prismic-javascript": "^2.1.1",
     "prismic-reactjs": "^1.1.1",
-    "qs": "^6.9.1",
+    "qs": "^6.9.7",
     "react": "16.11.0",
     "react-css-burger": "CleanStartBC/react-css-burger",
     "react-dom": "16.11.0",
